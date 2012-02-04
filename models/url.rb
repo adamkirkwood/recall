@@ -5,6 +5,8 @@ TOKEN_LENGTH = 0..4
 TOKEN_KEY = "url"
 
 class Url  
+  attr_reader :token, :url
+  
   def initialize(params = {})
     @url = params[:url] if params[:url]
     @token = params[:token] if params[:token]
@@ -27,10 +29,6 @@ class Url
       
       redis.setnx self.class.token_key(@token), @url
     end
-  end
-  
-  def token
-    @token
   end
   
   def self.token_key(token)

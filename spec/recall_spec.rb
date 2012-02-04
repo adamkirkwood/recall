@@ -64,8 +64,10 @@ describe 'URL Service' do
     end
     
     it "should return the original URL given a valid token" do
-      @expanded_url = Url.find_by_token('a5c2a')
-      @expanded_url.should == 'http://www.fitmentfreak.com'
+      get '/a5c2a'
+      last_response.should be_redirect
+      follow_redirect!
+      last_request.url.should == 'http://www.fitmentfreak.com/'
     end
   end
 end
