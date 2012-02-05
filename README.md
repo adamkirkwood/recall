@@ -8,11 +8,11 @@ Routes
 
 Redirect requires a token param.
 
-  GET /:token
+    GET /:token
 
 Creating a new short URL requires a :url query param.
 
-  POST /new
+    POST /new
   
 
 Setup
@@ -40,14 +40,15 @@ Then make sure you have your redis server running:
 Testing
 -------
 
-This project uses RSpec.
+This project uses RSpec and autotest.
 
 To run the tests:
 
-    $ rake
+    $ rspec
 
-To add tests see the `Commands` section earlier in this
-README.
+Or, have autotest run your tests once it detects any of your specs have changed.
+
+    $ autotest
 
 
 Contributing
