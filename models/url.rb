@@ -1,11 +1,11 @@
 require 'digest/sha1'
 require 'redis'
 
-TOKEN_LENGTH = 0..4
-TOKEN_KEY = "url"
-
 class Url  
   attr_reader :token, :url
+  
+  TOKEN_LENGTH = 0..4
+  TOKEN_KEY = "url"
   
   def initialize(params = {})
     @url = params[:url] if params[:url]

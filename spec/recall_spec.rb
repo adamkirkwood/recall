@@ -13,7 +13,7 @@ end
 
 describe 'Recall Service' do  
   
-  describe 'Routing' do
+  context 'Routing' do
     it "should load the home page" do
       get '/'
       last_response.should be_ok
@@ -25,7 +25,7 @@ describe 'Recall Service' do
     end
   end
   
-  describe 'Redirection' do
+  context 'Redirection' do
     before :each do
       redis = Redis.new
       redis.set "url:a5c2a", "http://www.fitmentfreak.com"
@@ -36,7 +36,7 @@ describe 'Recall Service' do
       redis.flushall
     end
   
-    it "should return the original URL given a valid token" do
+    it "should redirect the user to original URL given a valid token" do
       get '/a5c2a'
       last_response.should be_redirect
       follow_redirect!
