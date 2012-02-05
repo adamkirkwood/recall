@@ -1,7 +1,7 @@
 Recall.rb
 =============
 
-A simple URL shortening service based on Sinatra and Redis.
+A simple URL shortening service based on [Sinatra][sin] and [Redis][redis].
 
 Routes
 -------
@@ -28,7 +28,7 @@ Usage
 
     sinatra recall.rb
 
-I prefer to use Shotgun during development:
+I prefer to use [Shotgun][sg] during development:
 
     shotgun 'github/markup'
     
@@ -62,6 +62,7 @@ Contributing
 6. Enjoy a refreshing Diet Coke and wait
 
 
-[r2h]: http://github.com/github/markup/tree/master/lib/github/commands/rest2html
-[r2hc]: http://github.com/github/markup/tree/master/lib/github/markups.rb#L13
-[1]: http://github.com/github/markup/issues
+[sin]: http://sinatrarb.com
+[redis]: http://redis.io
+[sg]: https://github.com/rtomayko/shotgun/
+[1]: http://github.com/adamkirkwood/recall/issues
