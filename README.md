@@ -1,6 +1,8 @@
 Recall.rb
 =============
 
+[![Build Status](https://secure.travis-ci.org/adamkirkwood/recall.png)](http://travis-ci.org/adamkirkwood/recall)
+
 A simple URL shortening service based on [Sinatra][sin] and [Redis][redis].
 
 Routes
