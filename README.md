@@ -20,9 +20,7 @@ Creating a new short URL requires a :url query param.
 Setup
 -----
 
-    gem install sinatra
-    gem install rspec
-    gem install redis
+    bundle install
 
 
 Usage
@@ -36,7 +34,7 @@ I prefer to use [Shotgun][sg] during development:
     
 Then make sure you have your redis server running:
 
-    redis-server
+    $ redis-server
 
 
 Testing
